@@ -1,5 +1,5 @@
 import numpy as np
-from utilites.utilities import load_itk
+from utilities.utilities import load_itk
 
 class CTImage:
     def __init__(self, filename):
