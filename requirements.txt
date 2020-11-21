@@ -1,0 +1,4 @@
+pandas
+SimpleITK
+opencv-python
+tqdm
