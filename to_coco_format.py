@@ -87,7 +87,7 @@ if __name__=='__main__':
                 bbox=[x_min, y_min, x_max - x_min, y_max - y_min],
                 area=(x_max - x_min) * (y_max - y_min),
                 segmentation=[], 
-                is_crowd=0
+                iscrowd=0
             ))
             obj_count += 1
             
