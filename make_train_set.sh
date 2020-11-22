@@ -11,7 +11,7 @@ do
   wget https://zenodo.org/record/3723295/files/subset$i.zip -P ./data/
   7z x ./data/subset$i.zip
   mv subset$i ./data/
-  rm subset$i.zip
+  rm ./data/subset$i.zip
 done
 
 mkdir /content/train_raw
