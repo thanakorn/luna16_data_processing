@@ -11,11 +11,13 @@ from concurrent.futures import ThreadPoolExecutor
 argument_parser = argparse.ArgumentParser()
 argument_parser.add_argument('--data', type=str, default='./data')
 argument_parser.add_argument('--output', type=str, default='./output')
+argument_parser.add_argument('--set_name', type=str, default='annotations')
 argument_parser.add_argument('--num_processes', type=int, default=1)
 
 args = argument_parser.parse_args()
 data_path = args.data
 output_path = args.output
+set_name = args.set_name
 num_processes = int(args.num_processes)
 
 def get_seriesuid(filename):
@@ -102,6 +104,6 @@ if __name__=='__main__':
         annotations=detections,
         categories=[{'id':0, 'name': 'nodule'}]
     )
-    with open(f'{output_path}/annotation.json', 'w') as f:
+    with open(f'{output_path}/{set_name}.json', 'w') as f:
         json.dump(annotation_json, f)
     
