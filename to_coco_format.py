@@ -92,12 +92,10 @@ if __name__=='__main__':
                 iscrowd=0
             ))
             obj_count += 1
+            nodules_log.write(f'{seriesuid},{z}\n')
             
         except:
             pass
-
-    # print(images[0:5])
-    # print(detections[0:5])
 
     annotation_json = dict(
         images=images,
